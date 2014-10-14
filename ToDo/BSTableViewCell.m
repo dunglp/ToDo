@@ -82,17 +82,20 @@ const float UI_CUES_WIDTH = 50.0f;
         UIGestureRecognizer* recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
         recognizer.delegate = self;
         [self addGestureRecognizer:recognizer];
-    }
     
     // Create a label that display item description
     _itemDescriptionLabel = [[BSStrikeLabel alloc] initWithFrame:CGRectNull];
-    _itemDescriptionLabel.textColor = [UIColor whiteColor];
-    _itemDescriptionLabel.font = [UIFont boldSystemFontOfSize:16];
-    _itemDescriptionLabel.backgroundColor = [UIColor clearColor];
-    [self addSubview: _itemDescriptionLabel];
+    
+    if (_itemDescriptionLabel) {
+        _itemDescriptionLabel.textColor = [UIColor whiteColor];
+        _itemDescriptionLabel.font = [UIFont boldSystemFontOfSize:16];
+        _itemDescriptionLabel.backgroundColor = [UIColor clearColor];
+        [self addSubview: _itemDescriptionLabel];
+    }
     
     // Remove the default selected cells' blue highlight
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     
     return self;
 }
