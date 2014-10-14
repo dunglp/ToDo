@@ -10,15 +10,15 @@
 
 @implementation BSToDoItem
 
--(id)initWithText:(NSString*)text {
+-(id) initWithText: (NSString*) description {
     if (self = [super init]) {
-        self.text = text;
+        self.itemDescription = description;
     }
     return self;
 }
 
-+(id)toDoItemWithText:(NSString *)text {
-    return [[BSToDoItem alloc] initWithText:text];
++(id) toDoItemWithText: (NSString *) description {
+    return [[BSToDoItem alloc] initWithText:description];
 }
 
 @end

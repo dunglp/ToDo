@@ -11,4 +11,5 @@
 @interface BSViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, BSTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

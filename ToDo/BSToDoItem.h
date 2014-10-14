@@ -10,17 +10,17 @@
 
 @interface BSToDoItem : NSObject
 
-// A text description of this item.
-@property (nonatomic, copy) NSString *text;
+// Item Description
+@property (nonatomic, copy) NSString *itemDescription;
 
-// A Boolean value that determines the completed state of this item.
+// Item completed state
 @property (nonatomic) BOOL completed;
 
-// Returns an SHCToDoItem item initialized with the given text.
--(id)initWithText:(NSString*)text;
+// Init a new item with description
+-(id) initWithText: (NSString*) description;
 
-// Returns an SHCToDoItem item initialized with the given text.
-+(id)toDoItemWithText:(NSString*)text;
+// Init a new item with description
++(id) toDoItemWithText: (NSString*) description;
 
 @end
 

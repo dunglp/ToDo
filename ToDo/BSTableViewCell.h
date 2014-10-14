@@ -9,13 +9,13 @@
 #import "BSToDoItem.h"
 #import "BSTableViewCellDelegate.h"
 
-// A custom table cell that renders SHCToDoItem items.
+// A custom table cell
 @interface BSTableViewCell : UITableViewCell
 
-// The item that this cell renders.
+// Rendering items
 @property (nonatomic) BSToDoItem *todoItem;
 
-// The object that acts as delegate for this cell.
+// Cell delegate
 @property (nonatomic, assign) id<BSTableViewCellDelegate> delegate;
 
 @end

@@ -10,7 +10,7 @@
 
 @interface BSStrikeLabel : UILabel
 
-// A Boolean value that determines whether the label should have a strikethrough.
+// Strikethrough label state
 @property (nonatomic) bool strikethrough;
 
 @end
